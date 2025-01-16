@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countchar(str){
+            let cntObj={}
+            let str1=str.toUpperCase()
+            for(i=0;i<str.length;i++){
+                if(str1[i]==' '){
+                    continue;
+                }
+                if(cntObj[str1[i]]){
+                    cntObj[str1[i]]++;
+                }else{
+                    cntObj[str1[i]]=1;
+                }
+            }
+            return cntObj;
+        }
+        let string='Amolya Sharma';
+        let result=countchar(string);
+        document.write(JSON.stringify(result));
+        document.write("<br>");
+        document.write("<br>");
+        let string1='Chinmay Kulkarni'
+        let result2=countchar(string1)
+        document.write(JSON.stringify(result2));
+    </script>
+</body>
+</html>
